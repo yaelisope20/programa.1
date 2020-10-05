@@ -2,94 +2,34 @@
 #include <stdlib.h>
 
 int main()
-   char C1,C2,C3;
-   int C01,C02,C03,S;
-   float CT;
-
-   printf("dame la calificacion 1 C1:\n");
-   scanf("%c",&C1);
-   printf("dame la calificacion 2 C2:\n");
-   fflush(stdin);
-   scanf("%c",&C2);
-   printf("dame la calificacion 3 C3:\n");
-   fflush(stdin);
-   scanf("%c",&C3);
+{
+    float a,b,c,D;
 
 
-    if(C1=='A'||C1=='a')
+    printf("Dame el valor de  a:\n");
+    scanf("%f",&a);
+    printf("Dame el valor de b:\n");
+    scanf("%f",&b);
+    printf("Dame el valor de c.\n");
+    scanf("%f",&c);
 
+    D=b*b-(4*a*c);
+
+    if(D==0)
+      printf("x:%.f\n",(-b/(2*a)));
+
+    else if(D>0)
     {
-        C01=10;
-    }
-
-    else if(C1=='B'||C1=='b')
-
-    {
-        C01=9;
-    }
-
-    else if(C1=='C'||C1=='c')
-
-    {
-        C01=8;
-    }
-
-    else
-
-    {
-        C01=0;
-    }
-
-    if(C2=='A'||C2=='a')
-
-    {
-        C02=10;
-    }
-
-    else if(C2=='B'||C2=='b')
-
-    {
-        C02=9;
-    }
-
-    else if(C2=='C'||C2=='c')
-
-    {
-        C02=8;
-    }
-
-    else
-    {
-        C02=0;
-    }
-
-
-    if(C3=='A'||C3=='a')
-
-        C03=10;
-
-    else if(C3=='B'||C3=='b')
-
-    {
-        C03=9;
-    }
-
-    else if(C3=='C'||C3=='c')
-    {
-        C03=8;
+       printf(" x1: %.3f\n",(-b+sqrt(D))/(2*a));
+       printf(" x2: %.3f\n",(-b-sqrt(D))/(2*a));
     }
     else
-
     {
-        C03=0;
+        /*D<0*/
+        printf("x1: %.3f+%.3f i\n",-b/(2*a),(sqrt(-D))/(2*a));
+        printf("x2: %.3f-%.3f i\n",-b/(2*a),(sqrt(-D))/(2*a));
     }
-
-S=C01+C02+C03;
-CT=S/3;
-
-    printf(" el promedio final es: %.2f",CT);
 
     return 0;
 
 }
-
