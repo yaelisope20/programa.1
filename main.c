@@ -2,21 +2,94 @@
 #include <stdlib.h>
 
 int main()
-{
-    float VF;
-    float R1, R2, R3;
-    printf("dame el voltaje de la fuente  V:");
-    scanf ("%f", &VF);
-    printf("\n");
+   char C1,C2,C3;
+   int C01,C02,C03,S;
+   float CT;
 
-    R1= (VF-1.5)/0.015;
-    R2= (VF-1.8)/0.015;
-    R3= (VF-1.8)/0.015;
+   printf("dame la calificacion 1 C1:\n");
+   scanf("%c",&C1);
+   printf("dame la calificacion 2 C2:\n");
+   fflush(stdin);
+   scanf("%c",&C2);
+   printf("dame la calificacion 3 C3:\n");
+   fflush(stdin);
+   scanf("%c",&C3);
 
-    printf("la resistencia del led rojo es: %.3f ohms\n", R1);
-    printf("la resistencia del led verde es: %.3f ohms\n", R2);
-    printf("la resistencia del led amarillo es: %.3f ohms\n", R3);
+
+    if(C1=='A'||C1=='a')
+
+    {
+        C01=10;
+    }
+
+    else if(C1=='B'||C1=='b')
+
+    {
+        C01=9;
+    }
+
+    else if(C1=='C'||C1=='c')
+
+    {
+        C01=8;
+    }
+
+    else
+
+    {
+        C01=0;
+    }
+
+    if(C2=='A'||C2=='a')
+
+    {
+        C02=10;
+    }
+
+    else if(C2=='B'||C2=='b')
+
+    {
+        C02=9;
+    }
+
+    else if(C2=='C'||C2=='c')
+
+    {
+        C02=8;
+    }
+
+    else
+    {
+        C02=0;
+    }
+
+
+    if(C3=='A'||C3=='a')
+
+        C03=10;
+
+    else if(C3=='B'||C3=='b')
+
+    {
+        C03=9;
+    }
+
+    else if(C3=='C'||C3=='c')
+    {
+        C03=8;
+    }
+    else
+
+    {
+        C03=0;
+    }
+
+S=C01+C02+C03;
+CT=S/3;
+
+    printf(" el promedio final es: %.2f",CT);
 
     return 0;
 
 }
+
